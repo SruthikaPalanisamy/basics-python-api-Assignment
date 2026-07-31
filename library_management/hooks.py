@@ -5,6 +5,32 @@ app_description = "This is a Library Management App"
 app_email = "sruthikap.23csd@kongu.edu"
 app_license = "mit"
 
+doc_events = {
+    "ToDo": {
+        "validate": "library_management.library_management.api.custom_logic"
+    }
+}
+
+
+#app_include_css = "/assets/library_management/css/custom.css"
+#app_include_js = "/assets/library_management/js/custom.js"
+
+#web_include_js = "/assets/library_management/js/custom.js"
+#web_include_css = "/assets/library_management/css/custom.css"
+
+#webform_include_js = "/assets/library_management/js/custom.js"
+#webform_include_css = "/assets/library_management/css/custom.css"
+#page_js = {
+ #   "permission-manager": "/assets/library_management/js/permission-manager.js"
+#}
+
+sounds = [
+    {
+       "src": "/assets/library_management/sounds/success.mp3"
+    }
+]
+
+
 # Apps
 # ------------------
 
@@ -136,7 +162,7 @@ app_license = "mit"
 
 # Document Events
 # ---------------
-# Hook on document methods and events
+#Hook on document methods and events
 
 # doc_events = {
 # 	"*": {
