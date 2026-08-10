@@ -1,6 +1,11 @@
-### Library Management
+### LMS FRAPPE ASSUGNMENTa
 
-This is a Library Management App
+Assignment 1: basics-asset-bundling Assignment
+
+Files
+Hooks.py -  ‎library_management/hooks.py
+API.py   -  ‎library_management/library_management/api.py
+
 
 ### Installation
 
