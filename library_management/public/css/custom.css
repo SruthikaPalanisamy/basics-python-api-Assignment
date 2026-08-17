@@ -1,7 +1,11 @@
-
-.page-title{
-    color:blue;
+body {
+    background: #5b5555;
 }
-.page-container {
-    background: rgb(208, 205, 208) !important;
+
+h1 {
+    color: blue;
+}
+
+.btn-primary {
+    background: green !important;
 }

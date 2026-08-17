@@ -4,31 +4,269 @@ app_publisher = "Me"
 app_description = "This is a Library Management App"
 app_email = "sruthikap.23csd@kongu.edu"
 app_license = "mit"
+# website with dynamic routes
+# get_web_pages_with_dynamic_routes = "library_management.script.get_web_pages_with_dynamic_routes"
 
-doc_events = {
-    "ToDo": {
-        "validate": "library_management.library_management.api.custom_logic"
-    }
-}
+# homepage = "homepage"
 
+
+
+# Portal Side Bar
+# portal_menu_items = [
+#     {
+#         "title": "Test Menu",
+#         "route": "/admin-dashboard"
+#     }
+# ]
+# portal_menu_items = [
+#     {
+#         "title": "Dashboard",
+#         "route": "/dashboard",
+#         "role": "Student"
+#     },
+#     {
+#         "title": "My Books",
+#         "route": "/my-books",
+#         "role": "Student"
+#     },
+# ]
+# Base Tempalte
+# base_template = "library_management/templates/my_custom_base.html"
+# base_template_map = {
+#     r"docs.*": "templates/doc_template.html"
+# }
+
+
+# braintree_success_page = "library_management.integrations.braintree.success_page"
+
+
+# default_mail_footer = """
+# <div>
+#     <b>Sent via Library Management System</b>
+# </div>
+# """
+
+# auth_hooks = [
+#     "library_management.over.validate_custom_auth"
+# ]
+
+
+
+#Document Query
+# permission_query_conditions = {
+#     "Jammy": "library_management.permissions.todo_query"
+# }
+
+
+# has_permission = {
+#     "Event": "library_management.permissions.event_has_permission"
+# }
+
+# has_permission = {
+#     "Student": "library_management.permissions.student_permission"
+# }
+
+# override_doctype_class = {
+#     "ToDo": "library_management.overrides.todo.CustomToDo"
+# }
+
+# calendars = ["C_view" ]
+
+
+
+# doc_events = {
+#     "Travel Manager": {
+#         "before_insert": "library_management.crud_events.before_insert_book",
+#         "after_insert": "library_management.crud_events.after_insert_book"
+#     }
+# }
+
+# doctype_js = {
+
+#     "ToDo": "public/js/todo.js"
+
+# }
+
+# jinja = {
+#     "methods": [
+#         "library_management.utils.get_library_name",
+#         "library_management.utils.greet"
+#     ],
+#     "filters": [
+#         "library_management.utils.to_upper",
+#         "library_management.utils.reverse_string"
+#     ]
+# }
+
+
+# override_whitelisted_methods = {
+#     "frappe.client.get_count" : [library_management.whitelisted.custom_get_count]
+# }
+# override_whitelisted_methods = {
+#     "frappe.client.get_count": "library_management.whitelisted.custom_get_count"
+# }
+
+# notification_config = "library_management.notifications.get_config"
+# # auto_cancel_exempted_doctypes = ["Library_Category"]
+# ignore_links_on_delete = ["Receipt"]
+
+
+# additional_timeline_content = {
+#     "*": [
+#         "library_management.timeline.all_timeline"
+#     ]
+# }
+# scheduler_events = {
+#     "all": [
+#         "library_management.tasks.every_minute_task"
+#     ]
+# }
+# scheduler_events = {
+#     "cron": {
+#         "* * * * *": [
+#             "library_management.tasks.every_minute_task"
+#         ] 
+#     }
+# }
+# runs 4 mins
+# before_migrate = "library_management.migrate.before_migrate"
+# after_migrate = "library_management.migrate.after_migrate"
+
+# auth_hooks = [
+#     "library_management.auth.validate_token"
+# ]
+
+# extend_doctype_class = {
+#     "Tag" : ["library_management.extensions.tag.Add" , "library_management.extensions.name.Join"] 
+    
+# }
+
+# fixtures = [
+#     "Library_Category" , 
+
+#     {
+#         "dt": "Profile1", 
+#         "filters": [
+#             ["name", "=", "A-0001"] 
+#         ]
+#     }
+# ]
+
+#signup_form_template = "library_management/templates/signup-form.html"
+
+# user_data_fields = [
+#     {
+#         "doctype": "Travel Manager",
+#         "filter_by": "email"
+#     } , {
+#         "doctype": "Customer" , 
+#         "filter_by": "password"
+#     }
+# ]
+# your_custom_app/hooks.py
+
+# user_data_fields = [
+#     # Case 1: Scrub specific fields in a custom profile DocType where email matches
+#     {
+#         "doctype": "Travel Manager",
+#         "filter_by": "email",
+#         "redact_fields": ["email", "phone_number"],
+#         "rename": True, # Renames document if primary key is the user's email
+#     }
+
+    # # Case 2: Strict scrub for sensitive feedback or comments across the whole app
+    # {
+    #     "doctype": "Project Review",
+    #     "filter_by": "reviewer_email",
+    #     "strict": True,
+    #     "redact_fields": ["review_text"],
+    # },
+
+    # # Case 3: Partial redaction for user mention references in logs
+    # {
+    #     "doctype": "Activity Log",
+    #     "filter_by": "user",
+    #     "partial": True
+    # }
+# ]
+# extend_bootinfo = "library_management.boot.extend_bootinfo"
+
+# before_install = "library_management.setup.install.before_install"
+# after_install = "library_management.setup.install.after_install"
+# after_sync = "library_management.setup.install.after_sync"
+
+# before_uninstall = "library_management.setup.install.before_uninstall"
+# after_uninstall = "library_management.setup.install.after_uninstall"
+
+
+# brand_html = """
+# <div style="display:flex;align-items:center;gap:8px;">
+#     <img src="/assets/library_management/images/image.png"
+#          height="30">
+#     <span>TennisMart</span>
+# </div>
+# # """
+
+# on_login = "library_management.auth_hooks.login_handler"
+# on_session_creation = "library_management.auth_hooks.session_created"
+# on_logout = "library_management.auth_hooks.logout_handler"
+
+    
+# doctype_js = {
+#     "ToDo": "library_management/public/js/todo.js" }
+
+
+# update_website_context = (
+#     "library_management.website_context.update_context"
+# )
+
+# extend_website_page_controller_context = {
+#     "frappe.www.404": "library_management.website_context.context_404"
+# }
+
+# website_route_rules = [
+#     {
+#         "from_route": "/project/<name>",
+#         "to_route": "project"
+#     }
+# ] 
+
+# website_path_resolver = (
+#     "library_management.path_resolver.resolve_path"
+# )
+
+# website_clear_cache = (
+#     "library_management.website.clear_cache"
+# )
 
 #app_include_css = "/assets/library_management/css/custom.css"
 #app_include_js = "/assets/library_management/js/custom.js"
 
-#web_include_js = "/assets/library_management/js/custom.js"
-#web_include_css = "/assets/library_management/css/custom.css"
+# web_include_css = "/assets/library_management/css/custom.css"
+# web_include_js = "/assets/library_management/js/custom.js"
 
-#webform_include_js = "/assets/library_management/js/custom.js"
-#webform_include_css = "/assets/library_management/css/custom.css"
+# webform_include_js = {
+#     "student-form": "/library_management/assets/js/custom.js"
+# }
+
+# webform_include_css = {
+#     "student-form": "/library_management/assets/css/custom.css"
+# }
+
+
+# sounds = [
+#     {"name": "success", "src": "/assets/app/sounds/success.mp3", "volume": 0.8}
+# # ]
+
+
+# webform_include_js = "/assets/library_management/js/custom.js"
+# webform_include_css = "/assets/library_management/css/custom.css"
+
+
 #page_js = {
  #   "permission-manager": "/assets/library_management/js/permission-manager.js"
 #}
 
-sounds = [
-    {
-       "src": "/assets/library_management/sounds/success.mp3"
-    }
-]
 
 
 # Apps

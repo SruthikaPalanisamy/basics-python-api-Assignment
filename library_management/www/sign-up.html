@@ -1,0 +1,100 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <h2 class="text-center mb-4">Sign Up</h2>
+
+            <form id="signup-form">
+
+                <div class="mb-3">
+                    <label>Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        class="form-control"
+                        placeholder="Enter Email"
+                        required>
+                </div>
+
+                <div class="mb-3">
+                    <label>Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        class="form-control"
+                        placeholder="Enter Password"
+                        required>
+                </div>
+
+                <div class="mb-3">
+                    <label>Phone Number</label>
+                    <input
+                        type="text"
+                        id="phone_number"
+                        class="form-control"
+                        placeholder="Enter Phone Number">
+                </div>
+
+                <div class="mb-3">
+                    <label>Native</label>
+                    <input
+                        type="text"
+                        id="native"
+                        class="form-control"
+                        placeholder="Enter Native Place">
+                </div>
+
+                <button
+                    type="submit"
+                    class="btn btn-primary w-100">
+                    Sign Up
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<script>
+
+document.getElementById("signup-form").onsubmit = async function(e){
+
+    e.preventDefault();
+
+    const response = await fetch(
+        "/api/method/library_management.api.custom_signup",
+        {
+            method:"POST",
+
+            headers:{
+                "Content-Type":"application/json"
+            },
+
+            body:JSON.stringify({
+
+                email:document.getElementById("email").value,
+
+                password:document.getElementById("password").value,
+
+                phone_number:document.getElementById("phone_number").value,
+
+                native:document.getElementById("native").value
+
+            })
+        }
+    );
+
+    const result = await response.json();
+
+    alert(result.message);
+
+};
+
+</script>
+
+{% endblock %}

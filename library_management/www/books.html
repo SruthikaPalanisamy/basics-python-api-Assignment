@@ -1,0 +1,17 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+
+<h2>{{ title }}</h2>
+
+<h3>{{ message }}</h3>
+
+<p>Discount : {{ discount }}</p>
+
+{% for book in books %}
+
+<p>{{ book.name }}</p>
+
+{% endfor %}
+
+{% endblock %}
