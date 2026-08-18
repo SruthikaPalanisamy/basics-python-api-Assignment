@@ -4,6 +4,12 @@ app_publisher = "Me"
 app_description = "This is a Library Management App"
 app_email = "sruthikap.23csd@kongu.edu"
 app_license = "mit"
+
+scheduler_events = {
+    "daily": [
+        "library_management.tasks.daily_maintenance"
+        ]
+}
 # website with dynamic routes
 # get_web_pages_with_dynamic_routes = "library_management.script.get_web_pages_with_dynamic_routes"
 
