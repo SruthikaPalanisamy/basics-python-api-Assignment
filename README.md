@@ -10,6 +10,13 @@ Files
   Drive Link:
   https://drive.google.com/drive/folders/1YIYD9ueNxCXWisuyBUmmg_8RXuiDwb99?usp=sharing
 
+
+Assignment 2: Python API documentation Assignment
+-assignment.py  -  ‎library_management/library_management/api2.py
+
+Drive Link:
+
+
 ### Installation
 
 You can install this app using the [bench](https://github.com/frappe/bench) CLI:
