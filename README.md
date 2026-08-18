@@ -1,6 +1,6 @@
-### LMS FRAPPE ASSUGNMENTa
+# LMS FRAPPE ASSIGNMENT
 
-Assignment 1: basics-API Assignment
+## Assignment 1: basics-API Assignment
 
 Files
 
@@ -10,12 +10,18 @@ Files
   Drive Link:
   https://drive.google.com/drive/folders/1YIYD9ueNxCXWisuyBUmmg_8RXuiDwb99?usp=sharing
 
-
-Assignment 2: Python API documentation Assignment
+## Assignment 2: Python API documentation Assignment
 - Assignment.py   -  ‎library_management/library_management/assignment.py
 
 Drive Link:
 https://drive.google.com/file/d/1eU11zdji2_BFS-kaeaXNmsKExh2On37F/view?usp=sharing
+
+## Assignment 3 : Python API Background Jobs
+- Hooks.py -  ‎library_management/hooks.py
+- tasks.py -  ‎library_management/tasks.py
+
+Drive Link:
+https://drive.google.com/file/d/1TmAnuudvE7qL9IT2F_3_jmRwYDc9vjBf/view?usp=sharing
 
 
 ### Installation
