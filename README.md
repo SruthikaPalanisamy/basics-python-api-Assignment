@@ -35,6 +35,14 @@ https://drive.google.com/file/d/1eU11zdji2_BFS-kaeaXNmsKExh2On37F/view?usp=shari
 
 Drive Link:
 https://drive.google.com/file/d/1PY8oXEHnuapGYggqaGiTqTF7XebNuYRo/view?usp=sharing
+#JavaScript API
+## Assignment 6: Python API Utilies Assignment
+- API.py   -  ‎library_management/library_management/api.py
+- Task.js   -  ‎library_management/library_management/doctype/task/task.js
+
+
+Drive Link:
+https://drive.google.com/drive/folders/171PVeyEyxgsOiVNSqbDHJAmEEL9ByQpG?usp=sharing
 
 ### Installation
 
