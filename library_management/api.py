@@ -1,4 +1,21 @@
 import frappe
+
+@frappe.whitelist()
+def get_message():
+    return "Hello"
+
+@frappe.whitelist()
+def greet(name):
+    return f"Hello {name}"
+
+
+@frappe.whitelist() 
+
+def create_task(task_subject):
+    task = frappe.new_doc("Task") 
+    task.task_subject = task_subject 
+    task.save() 
+    return task.name
 # from my_app.search import MyAppSearch
 
 
@@ -27,34 +44,34 @@ import frappe
 #     )
 
 
-@frappe.whitelist()
-def get_recent_todos():
+# @frappe.whitelist()
+# def get_recent_todos():
 
-    todos = frappe.get_list(
-        "ToDo",
-        fields=["name", "description", "owner"],
-        order_by="creation desc",
-        limit_page_length=5
-    )
+#     todos = frappe.get_list(
+#         "ToDo",
+#         fields=["name", "description", "owner"],
+#         order_by="creation desc",
+#         limit_page_length=5
+#     )
 
-    records = []
+#     records = []
 
-    for todo in todos:
-        owner_email = frappe.db.get_value(
-            "User",
-            todo.owner,
-            "email"
-        )
+#     for todo in todos:
+#         owner_email = frappe.db.get_value(
+#             "User",
+#             todo.owner,
+#             "email"
+#         )
 
-        records.append({
-            "name": todo.name,
-            "description": todo.description,
-            "owner_email": owner_email
-        })
+#         records.append({
+#             "name": todo.name,
+#             "description": todo.description,
+#             "owner_email": owner_email
+#         })
 
-    timestamp = frappe.utils.now()
+#     timestamp = frappe.utils.now()
 
-    return {
-        "timestamp": timestamp,
-        "records": records
-    }
+#     return {
+#         "timestamp": timestamp,
+#         "records": records
+#     }
