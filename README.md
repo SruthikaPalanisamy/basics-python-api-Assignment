@@ -44,6 +44,10 @@ https://drive.google.com/file/d/1PY8oXEHnuapGYggqaGiTqTF7XebNuYRo/view?usp=shari
 Drive Link:
 https://drive.google.com/drive/folders/171PVeyEyxgsOiVNSqbDHJAmEEL9ByQpG?usp=sharing
 
+# Bench CLI
+## Site Management and Extending CLI
+- commands.py   -  ‎library_management/api.py
+
 ### Installation
 
 You can install this app using the [bench](https://github.com/frappe/bench) CLI:
