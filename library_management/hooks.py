@@ -9,6 +9,8 @@ app_license = "mit"
 sqlite_search = [
     "library_management.search.MyAppSearch"
 ]
+
+commands  = ["library_management.commands"]
 # scheduler_events = {
 #     "daily": [
 #         "library_management.tasks.daily_maintenance"
