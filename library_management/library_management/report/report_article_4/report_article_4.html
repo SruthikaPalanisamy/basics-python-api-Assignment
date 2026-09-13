@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Report Article 4</h3>
+        </div>
+
+        <div class="panel-body">
+            <p>
+                <strong>Article Filter:</strong>
+                <%= filters.article_filter || "All Articles" %>
+            </p>
+
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Article Name</th>
+                        <th>Author</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <% data.forEach(function(row) { %>
+                        <tr>
+                            <td><%= row.article_name || "" %></td>
+                            <td><%= row.author || "" %></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
