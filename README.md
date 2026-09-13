@@ -48,6 +48,16 @@ https://drive.google.com/drive/folders/171PVeyEyxgsOiVNSqbDHJAmEEL9ByQpG?usp=sha
 ## Site Management and Extending CLI
 - commands.py   -  ‎library_management/api.py
 
+# Reports and Printing
+##  Reports-and-printing-query Assignment
+- intern_report.js   -    ‎library_management/library_management/report/intern_report/intern_report.js
+- intern_report.py   -    ‎library_management/library_management/report/intern_report/intern_report.py
+- intern_report.json   -  ‎library_management/library_management/report/intern_report/intern_report.json
+- intern_report.html   -  ‎library_management/library_management/report/intern_report/intern_report.html
+
+
+
+
 ### Installation
 
 You can install this app using the [bench](https://github.com/frappe/bench) CLI:
