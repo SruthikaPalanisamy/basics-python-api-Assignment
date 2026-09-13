@@ -1,0 +1,145 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Profile1",
+  "enabled": 0,
+  "modified": "2026-07-30 12:13:12.513995",
+  "module": "library",
+  "name": "Script_1",
+  "script": "frappe.ui.form.on('Profile1', {\n\trefresh(frm) {\n\t\t// your code here\n\t\t        frappe.msgprint(\"Welcome to Library Member!\");\n\n\t}\n})",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "sample",
+  "enabled": 1,
+  "modified": "2026-07-30 12:25:59.802370",
+  "module": "library",
+  "name": "Script_2",
+  "script": "frappe.ui.form.on('sample', {\n\trefresh(frm) {\n\t    frappe.msgprint(\"This is my client script\")\n\t} , \n\t\n\t\n\t\n\t// validating\n\t validate(frm) {\n        if (!frm.doc.pswd) {\n            frappe.throw(\"Email is mandatory\");\n        }\n    } , \n    \n    \n     refresh(frm) {\n        frm.set_value(\"status\", \"Active\");\n    } , \n        user(frm) {\n        frappe.msgprint(\"Member Name Changed\");\n    }\n    \n})",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Web",
+  "enabled": 1,
+  "modified": "2026-07-30 14:16:57.256203",
+  "module": "library",
+  "name": "Script_3",
+  "script": "\r\nfrappe.listview_settings[\"Web\"] = {\r\n    onload(listview) {\r\n        frappe.msgprint(\"Library Member List Loaded\");\r\n    } ,\r\n    \r\n    \r\n     get_indicator(doc) {\r\n        if (doc.status === \"Active\") {\r\n            return [\"Active\", \"green\", \"status,=,Active\"];\r\n        }\r\n        return [\"Inactive\", \"red\", \"status,=,Inactive\"];\r\n    } , \r\n    \r\n    \r\n     add_fields: [\"name1\", \"age\", \"dob\", \"status\"],\r\n    button: {\r\n        show(doc) {\r\n            return true;\r\n        },\r\n           get_label() {\r\n            return \"View\";\r\n        },\r\n        \r\n       get_description(doc) {\r\n            return `View ${doc.name}`;\r\n        },\r\n       \r\n\r\n        action(doc) {\r\n            frappe.msgprint(doc.name1);\r\n            frappe.msgprint(doc.dob);\r\n            frappe.msgprint(doc.age);\r\n            frappe.msgprint(doc.status);\r\n        }\r\n    }\r\n    \r\n     \r\n     \r\n}; \r\n\r\n",
+  "view": "List"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Web",
+  "enabled": 1,
+  "modified": "2026-07-30 14:17:47.012829",
+  "module": null,
+  "name": "Script_4",
+  "script": "\r\nfrappe.listview_settings[\"Web\"] = {\r\n    onload(listview) {\r\n        frappe.msgprint(\"Library Member List Loaded\");\r\n    } ,\r\n    \r\n    \r\n     get_indicator(doc) {\r\n        if (doc.status === \"Active\") {\r\n            return [\"Active\", \"green\", \"status,=,Active\"];\r\n        }\r\n        return [\"Inactive\", \"red\", \"status,=,Inactive\"];\r\n    } , \r\n     \r\n     button: {\r\n        show(doc) {\r\n            return true;\r\n        },\r\n\r\n        get_label() {\r\n            return \"Open Membership\";\r\n        },\r\n\r\n        get_description(doc) {\r\n            return \"Go to Library Membership\";\r\n        },\r\n\r\n        action(doc) {\r\n            frappe.set_route(\"List\", \"Library Membership\");\r\n        }\r\n    }\r\n}; \r\n\r\n",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Web",
+  "enabled": 1,
+  "modified": "2026-07-30 14:43:48.534519",
+  "module": null,
+  "name": "Script_5",
+  "script": "\r\nfrappe.listview_settings[\"Web\"] = {\r\n    onload(listview) {\r\n        frappe.msgprint(\"Library Member List Loaded\");\r\n    } ,\r\n    \r\n    \r\n     get_indicator(doc) {\r\n        if (doc.status === \"Active\") {\r\n            return [\"Active\", \"green\", \"status,=,Active\"];\r\n        }\r\n        return [\"Inactive\", \"red\", \"status,=,Inactive\"];\r\n    } , \r\n     \r\n     button: {\r\n        show(doc) {\r\n            return true;\r\n        },\r\n\r\n        get_label() {\r\n            return \"Open Membership\";\r\n        },\r\n\r\n        get_description(doc) {\r\n            return \"Go to Library Membership\";\r\n        },\r\n\r\n        action(doc) {\r\n            frappe.set_route(\"List\", \"Library Membership\");\r\n        }\r\n    }\r\n}; \r\n\r\n",
+  "view": "List"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Details",
+  "enabled": 1,
+  "modified": "2026-08-03 11:06:00.527242",
+  "module": null,
+  "name": "Success",
+  "script": "frappe.ui.form.on('Details', {\r\n    refresh(frm) {\r\n        frappe.msgprint(\"This success sound is coming\");\r\n        frappe.utils.play_sound(\"success\");\r\n    }\r\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Customer",
+  "enabled": 1,
+  "modified": "2026-08-12 12:01:25.370992",
+  "module": "Library Management",
+  "name": "DocAPI",
+  "script": "frappe.ui.form.on(\"Customer\", {\n    refresh(frm) {\n        frappe.realtime.on(\"event_name\", function (data) {\n            console.log(\"Realtime event received:\", data);\n        });\n    }\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Intern",
+  "enabled": 1,
+  "modified": "2026-08-25 14:14:39.325633",
+  "module": null,
+  "name": "Intern Script",
+  "script": "frappe.ui.form.on('Intern', {\n\trefresh(frm) {\n        console.log(\"Library Book loaded\");\n\t}\n})",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Parent",
+  "enabled": 1,
+  "modified": "2026-08-25 15:11:38.743948",
+  "module": null,
+  "name": "Child",
+  "script": "frappe.ui.form.on('Parent', {\r\n    child(frm, certificate) {\r\n        console.log(\"certificate\");\r\n    }\r\n})",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Book",
+  "enabled": 1,
+  "modified": "2026-08-25 19:10:18.934236",
+  "module": null,
+  "name": "Reload_doc",
+  "script": "frappe.ui.form.on('Book', {\n    refresh(frm) {\n\n        frm.add_custom_button('Check Changes', () => {\n\n            if (frm.is_dirty()) {\n                frappe.msgprint('This Book has unsaved changes.');\n            } else {\n                frappe.msgprint('No unsaved changes.');\n            }\n\n        });\n\n    }\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Intern",
+  "enabled": 1,
+  "modified": "2026-08-27 15:21:30.465662",
+  "module": null,
+  "name": "Server Calls",
+  "script": "frappe.ui.form.on('Intern', {\n\trefresh(frm) {\n\t\tfrappe.db.get_doc(\"Intern\", \"Alice\")\n    .then(doc => {\n        console.log(doc);\n    });\n\t}\n})",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Task",
+  "enabled": 1,
+  "modified": "2026-08-28 12:58:19.397731",
+  "module": "Library Management",
+  "name": "Dialog",
+  "script": "frappe.ui.form.on(\"Task\", {\r\n    refresh(frm) {\r\n\r\n        frm.add_custom_button(\"Create Task\", function() {\r\n\r\n            const dialog = new frappe.ui.Dialog({\r\n                title: \"Create Task\",\r\n\r\n                fields: [\r\n                    {\r\n                        fieldname: \"task_subject\",\r\n                        label: \"Task Subject\",\r\n                        fieldtype: \"Data\",\r\n                        reqd: 1\r\n                    }\r\n                ],\r\n\r\n                primary_action_label: \"Create Task\",\r\n\r\n                primary_action(values) {\r\n\r\n                    frappe.call({\r\n                        method: \"library_management.api.create_task\",\r\n\r\n                        args: {\r\n                            task_subject: values.task_subject\r\n                        },\r\n\r\n                        callback: function(r) {\r\n\r\n                            if (r.message) {\r\n\r\n                                dialog.hide();\r\n\r\n                                frappe.msgprint({\r\n                                    title: \"Success\",\r\n                                    message: `Task <b>${r.message}</b> created successfully.`,\r\n                                    indicator: \"green\"\r\n                                });\r\n\r\n                            }\r\n                        }\r\n                    });\r\n                }\r\n            });\r\n\r\n            dialog.show();\r\n        });\r\n    }\r\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "User",
+  "enabled": 1,
+  "modified": "2026-09-13 16:10:30.121818",
+  "module": null,
+  "name": "User Client Script",
+  "script": "frappe.ui.form.on('User', {\n\trefresh(frm) {\n\t    frm.add_custom_button(\n\t            \"Send Welcome Email\" , \n\t            function() {\n\t                frappe.msgprint(\"Email Sent\");\n\t        } ), \n\t        \"Actions\"\n\t\n} \n\n});",
+  "view": "Form"
+ }
+]

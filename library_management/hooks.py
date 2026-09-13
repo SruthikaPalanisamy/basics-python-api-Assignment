@@ -6,11 +6,13 @@ app_email = "sruthikap.23csd@kongu.edu"
 app_license = "mit"
 
 
-sqlite_search = [
-    "library_management.search.MyAppSearch"
-]
+fixtures = ["Client Script"]
 
-commands  = ["library_management.commands"]
+# sqlite_search = [
+#     "library_management.search.MyAppSearch"
+# ]
+
+# commands  = ["library_management.commands"]
 # scheduler_events = {
 #     "daily": [
 #         "library_management.tasks.daily_maintenance"
