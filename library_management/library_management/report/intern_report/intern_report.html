@@ -1,0 +1,36 @@
+<div class="container">
+    <h2>Intern Report</h2>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Intern Name</th>
+                <th>Role</th>
+                <th>College</th>
+                <th>Stipend</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% for (var i = 0; i < data.length; i++) { %>
+                <tr>
+                    <td>
+                        <%= data[i].name1 %>
+                    </td>
+
+                    <td>
+                        <%= data[i].role %>
+                    </td>
+
+                    <td>
+                        <%= data[i].college %>
+                    </td>
+
+                    <td>
+                        <%= format_money(data[i].stipend) %>
+                    </td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</div>
