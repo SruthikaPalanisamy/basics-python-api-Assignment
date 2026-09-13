@@ -59,6 +59,13 @@ https://drive.google.com/drive/folders/171PVeyEyxgsOiVNSqbDHJAmEEL9ByQpG?usp=sha
 Drive Link:
 https://drive.google.com/file/d/1QL-UjuiQ4NATBZrmc-0XSpwd-TKn2woI/view?usp=sharing
 
+#  guides-1 Assignment
+- Hooks.py -  ‎library_management/hooks.py
+- Fixtures - ‎library_management/fixtures
+
+Drive Link:
+https://drive.google.com/file/d/1vGUo0pqTdFZexifOXoemwTsW1YPetVNy/view?usp=sharing
+
 ### Installation
 
 You can install this app using the [bench](https://github.com/frappe/bench) CLI:
