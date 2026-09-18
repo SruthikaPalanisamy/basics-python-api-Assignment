@@ -2,49 +2,33 @@
  "actions": [],
  "allow_bulk_edit": 1,
  "allow_rename": 1,
- "autoname": "hash",
- "creation": "2026-08-13 15:24:41.511420",
+ "creation": "2026-09-16 15:36:52.310065",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_9np5",
   "name1",
-  "age",
-  "color"
+  "age"
  ],
  "fields": [
   {
-   "fieldname": "section_break_9np5",
-   "fieldtype": "Section Break"
-  },
-  {
    "fieldname": "name1",
    "fieldtype": "Data",
-   "in_standard_filter": 1,
-   "label": "Name"
+   "label": "name"
   },
   {
    "fieldname": "age",
    "fieldtype": "Data",
-   "label": "age"
-  },
-  {
-   "fieldname": "color",
-   "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Color",
-   "not_nullable": 1,
-   "show_on_timeline": 1
+   "label": "Age"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
+ "is_virtual": 1,
  "links": [],
- "modified": "2026-09-17 12:06:50.512235",
+ "modified": "2026-09-16 15:37:41.454645",
  "modified_by": "Administrator",
  "module": "Library Management",
- "name": "pinkpen",
- "naming_rule": "Random",
+ "name": "Learn_virtual",
  "owner": "Administrator",
  "permissions": [
   {
@@ -56,18 +40,6 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Student",
    "share": 1,
    "write": 1
   }
